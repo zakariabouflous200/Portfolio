@@ -26,6 +26,28 @@ export const projectsData = [
         image: realEstate,
         visitLink: "https://zakariabouflous200.github.io/Bz_crypto/"
     },
+    {
+        id: 3,
+        name: 'Bouflous-Cinema',
+        description: 'Bouflous-Cinema est une application web qui permet aux utilisateurs d explorer des films, de gérer des listes de visionnage personnelles, et de voir des détails sur les cinémas et leurs séances. Le backend est construit avec Node.js et Express, avec MongoDB comme base de données. Les films peuvent être importés à partir d un fichier Excel et les interactions des utilisateurs sont gérées via une API sécurisée',
+        tools: ['Node.js', 'Express', 'MongoDB', 'Node-fetch', 'localStorage', 'JWT', 'Chokidar', 'React.js', 'Leaflet', 'Axios', 'tailwind css'],
+        code: '',
+        role: 'développeur Full Stack',
+        demo: '',
+        image: realEstate,
+        visitLink: "https://cinematheque-francaise.vercel.app/"
+    },
+    {
+        id: 4,
+        name: 'Real-madrid-app',
+        description: "L'application Real Madrid est une application Flutter qui permet aux fans d'accéder à des informations détaillées sur l'équipe, y compris les statistiques des joueurs et les actualités, via des APIs. Elle sert de hub pour les supporters afin de rester informés et connectés avec leur club favori.",
+        tools: ['Flutter', 'Dart', 'HTTP API'],
+        code: '',
+        role: 'développeur Full Stack',
+        demo: '',
+        image: realEstate,
+        visitLink: "https://github.com/zakariabouflous200/madrid/tree/main"
+    },
     
 ];
 
