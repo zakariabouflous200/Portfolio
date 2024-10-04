@@ -1,13 +1,12 @@
 // @flow strict
-"use client";
+"use client";  // Required for client-side rendering with hooks
+
 import { useState } from "react";
 import Link from "next/link";
 
 function Navbar() {
-  // State to manage mobile menu toggle
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle the menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -24,83 +23,41 @@ function Navbar() {
 
         {/* Hamburger Icon for Mobile */}
         <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
-          >
-            {/* Hamburger Icon */}
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
+          <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
 
-        {/* Navbar Links */}
+        {/* Navbar Links - Always visible on larger screens */}
         <ul
           className={`${
             isOpen ? "block" : "hidden"
-          } mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100`}
-          id="navbar-default"
-        >
+          } w-full flex-col items-start md:flex md:flex-row md:space-x-1 md:w-auto`} id="navbar-default">
           <li>
-            <a
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="#about"
-            >
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
-                A PROPOS
-              </div>
+            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#about">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">A PROPOS</div>
             </a>
           </li>
           <li>
-            <a
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="#experience"
-            >
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
-                EXPERIENCES
-              </div>
+            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#experience">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCES</div>
             </a>
           </li>
           <li>
-            <a
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="#skills"
-            >
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
-                COMPÉTENCES
-              </div>
+            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#skills">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">COMPÉTENCES</div>
             </a>
           </li>
           <li>
-            <a
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="#education"
-            >
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
-                FORMATIONS
-              </div>
+            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#education">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">FORMATIONS</div>
             </a>
           </li>
           <li>
-            <a
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="#projects"
-            >
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
-                PROJECTS
-              </div>
+            <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#projects">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
             </a>
           </li>
         </ul>
